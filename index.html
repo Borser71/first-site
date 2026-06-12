@@ -32,14 +32,13 @@
             --shadow-md: 0 20px 25px -12px rgba(0, 0, 0, 0.08);
         }
 
-        /* Контейнер */
         .container {
             max-width: 1280px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* Header с активными кнопками */
+        /* Header */
         .top-bar {
             background: white;
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
@@ -69,13 +68,6 @@
             color: transparent;
         }
 
-        .logo span {
-            color: var(--primary-dark);
-            background: none;
-            -webkit-background-clip: unset;
-        }
-
-        /* активные кнопки: телеграм, вацап, email */
         .contact-buttons {
             display: flex;
             gap: 18px;
@@ -113,11 +105,7 @@
             box-shadow: 0 8px 18px rgba(43, 122, 43, 0.2);
         }
 
-        .social-btn:hover i {
-            transform: scale(1.05);
-        }
-
-        /* hero секция */
+        /* Hero */
         .hero {
             padding: 60px 0 40px 0;
         }
@@ -186,7 +174,6 @@
         .btn-primary:hover {
             background: var(--primary-dark);
             transform: scale(1.02);
-            box-shadow: 0 12px 22px rgba(43, 122, 43, 0.3);
         }
 
         .hero-illustration {
@@ -204,7 +191,7 @@
             opacity: 0.8;
         }
 
-        /* секция услуг */
+        /* Services */
         .services {
             padding: 70px 0;
             background: var(--gray-light);
@@ -247,7 +234,6 @@
         .service-card:hover {
             transform: translateY(-8px);
             border-color: var(--primary-green);
-            box-shadow: 0 25px 30px -12px rgba(0, 0, 0, 0.1);
         }
 
         .card-icon {
@@ -259,12 +245,6 @@
         .service-card h3 {
             font-size: 1.7rem;
             margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .service-card p {
-            color: #2b462b;
-            margin-bottom: 20px;
         }
 
         .tech-tag {
@@ -279,7 +259,7 @@
             margin-top: 6px;
         }
 
-        /* секция портфолио / примеры */
+        /* Portfolio */
         .portfolio {
             padding: 70px 0;
         }
@@ -326,7 +306,7 @@
             margin-bottom: 8px;
         }
 
-        /* Стили для формы обратной связи (вписаны в общий дизайн, зелёные акценты) */
+        /* Contact Form */
         .contact-form-wrapper {
             max-width: 560px;
             margin: 30px auto 20px auto;
@@ -387,6 +367,25 @@
             box-shadow: 0 0 0 3px rgba(43, 122, 43, 0.1);
         }
 
+        /* Специальный блок-подсказка для Telegram ника */
+        .telegram-hint {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 6px;
+            font-size: 0.75rem;
+            color: #4a764a;
+            background: #f0faf0;
+            padding: 6px 12px;
+            border-radius: 100px;
+            width: fit-content;
+        }
+
+        .telegram-hint i {
+            font-size: 0.8rem;
+            color: var(--primary-green);
+        }
+
         .submit-btn {
             width: 100%;
             padding: 14px;
@@ -412,7 +411,7 @@
             box-shadow: 0 6px 14px rgba(43, 122, 43, 0.3);
         }
 
-        /* cta */
+        /* CTA */
         .cta {
             background: var(--primary-green);
             color: white;
@@ -492,7 +491,7 @@
         <div class="logo">
             ✦ AI<span>Freelance</span>
         </div>
-        <!-- Активные кнопки: Телеграм (ссылка), Вацап (ссылка), Email (прокрутка к форме) -->
+        <!-- Активные кнопки -->
         <div class="contact-buttons">
             <a href="https://t.me/your_freelance_bot" target="_blank" class="social-btn" aria-label="Telegram">
                 <i class="fab fa-telegram-plane"></i> Telegram
@@ -500,7 +499,6 @@
             <a href="https://wa.me/79991234567?text=Здравствуйте!%20Интересуют%20ваши%20услуги" target="_blank" class="social-btn" aria-label="WhatsApp">
                 <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
-            <!-- Кнопка email теперь плавно ведет к форме обратной связи (id="feedback-form-section") -->
             <a href="#feedback-form-section" class="social-btn" aria-label="Email">
                 <i class="far fa-envelope"></i> Email
             </a>
@@ -509,7 +507,7 @@
 </header>
 
 <main>
-    <!-- Hero / приветствие -->
+    <!-- Hero -->
     <section class="hero">
         <div class="container hero-grid">
             <div class="hero-content">
@@ -536,13 +534,12 @@
         </div>
     </section>
 
-    <!-- Услуги: что умею делать -->
+    <!-- Услуги -->
     <section class="services">
         <div class="container">
             <h2 class="section-title">Мои экспертизы</h2>
             <p class="section-sub">Помогаю бизнесу и частным клиентам автоматизировать общение и выделяться онлайн</p>
             <div class="cards-grid">
-                <!-- Карточка чат-боты с ИИ -->
                 <div class="service-card">
                     <div class="card-icon">
                         <i class="fab fa-telegram"></i> <i class="fas fa-brain"></i>
@@ -555,26 +552,24 @@
                         <span class="tech-tag">AI-логика</span>
                     </div>
                 </div>
-                <!-- Карточка одностраничные сайты-визитки / портфолио -->
                 <div class="service-card">
                     <div class="card-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
                     <h3>Сайты-визитки & портфолио</h3>
-                    <p>Адаптивные одностраничные сайты, быстрые, красивые и продающие. Под любой нише: фрилансеры, малый бизнес, творческие проекты. Под ключ с анимацией.</p>
+                    <p>Адаптивные одностраничные сайты, быстрые, красивые и продающие. Под любой нише: фрилансеры, малый бизнес, творческие проекты.</p>
                     <div>
                         <span class="tech-tag">HTML/CSS/JS</span>
                         <span class="tech-tag">Адаптив</span>
                         <span class="tech-tag">Скорость</span>
                     </div>
                 </div>
-                <!-- Доп. карточка: Интеграции и поддержка -->
                 <div class="service-card">
                     <div class="card-icon">
                         <i class="fas fa-plug"></i>
                     </div>
                     <h3>Умная автоматизация</h3>
-                    <p>Настройка чат-ботов с CRM, отправка уведомлений, интеграция с внешними API, создание админ-панелей для сайтов, чтобы вы управляли контентом легко.</p>
+                    <p>Настройка чат-ботов с CRM, отправка уведомлений, интеграция с внешними API, создание админ-панелей для сайтов.</p>
                     <div>
                         <span class="tech-tag">API</span>
                         <span class="tech-tag">Node.js/Python</span>
@@ -585,7 +580,7 @@
         </div>
     </section>
 
-    <!-- Портфолио / примеры работ -->
+    <!-- Портфолио -->
     <section class="portfolio">
         <div class="container">
             <h2 class="section-title">Избранные проекты</h2>
@@ -607,7 +602,7 @@
                     </div>
                     <div class="portfolio-info">
                         <h4>Портфолио дизайнера</h4>
-                        <p>Одностраничный сайт-визитка с галереей работ и формой связи. Зеленая эстетика, 100% конверсия.</p>
+                        <p>Одностраничный сайт-визитка с галереей работ и формой связи. Зеленая эстетика.</p>
                         <span class="tech-tag">Landing</span><span class="tech-tag">Анимация</span>
                     </div>
                 </div>
@@ -617,7 +612,7 @@
                     </div>
                     <div class="portfolio-info">
                         <h4>Support AI Bot</h4>
-                        <p>Корпоративный бот для техподдержки с распознаванием эмоций и быстрыми ответами на частые вопросы.</p>
+                        <p>Корпоративный бот для техподдержки с распознаванием эмоций и быстрыми ответами.</p>
                         <span class="tech-tag">NLP</span><span class="tech-tag">Telegram</span>
                     </div>
                 </div>
@@ -627,7 +622,7 @@
                     </div>
                     <div class="portfolio-info">
                         <h4>Визитка стоматолога</h4>
-                        <p>Элегантный одностраничный сайт с формой записи, картой, услугами. Интеграция с мессенджерами.</p>
+                        <p>Элегантный одностраничный сайт с формой записи, картой, услугами.</p>
                         <span class="tech-tag">Мобильная версия</span>
                     </div>
                 </div>
@@ -635,12 +630,11 @@
         </div>
     </section>
 
-    <!-- НОВАЯ СЕКЦИЯ: форма обратной связи (перед блоком "Готов обсудить ваш проект") -->
+    <!-- ФОРМА СВЯЗИ (с чётким пояснением про Telegram ник) -->
     <div class="contact-form-wrapper" id="feedback-form-section">
         <div class="contact-card">
             <h2><i class="far fa-envelope" style="margin-right: 10px; color: var(--primary-green);"></i> Связаться со мной</h2>
             <div class="form-sub">Заполните форму, и я отвечу в ближайшее время</div>
-            <!-- Форма с action на Formspree, метод POST, полностью рабочая -->
             <form action="https://formspree.io/f/xgobndjn" method="POST">
                 <div class="form-group">
                     <label for="name">Имя <span style="color:#e05a5a;">*</span></label>
@@ -653,18 +647,23 @@
                 <div class="form-group">
                     <label for="telegram">Ник Telegram</label>
                     <input type="text" id="telegram" name="telegram" placeholder="@username">
+                    <!-- Важное уточнение: для отправки нужен символ @ -->
+                    <div class="telegram-hint">
+                        <i class="fab fa-telegram"></i>
+                        <span>Для связи через Telegram укажите ник с <strong>@</strong> (например, @ivanov)</span>
+                    </div>
                 </div>
                 <button type="submit" class="submit-btn">
-                    <i class="fas fa-paper-plane"></i> Отправить сообщение
+                    <i class="fas fa-paper-plane"></i> Отправить
                 </button>
-                <p style="font-size: 0.75rem; text-align: center; margin-top: 18px; color: #558855;">
+                <p style="font-size: 0.7rem; text-align: center; margin-top: 18px; color: #558855;">
                     Нажимая «Отправить», вы соглашаетесь с обработкой данных.
                 </p>
             </form>
         </div>
     </div>
 
-    <!-- Блок CTA "Готов обсудить ваш проект" (теперь идёт сразу после формы) -->
+    <!-- Блок "Готов обсудить проект" -->
     <div class="container">
         <div class="cta">
             <h2>🔥 Готов обсудить ваш проект</h2>
@@ -684,16 +683,16 @@
         <p>© 2025 AI Freelance — Чат-боты с искусственным интеллектом и сайты-визитки на заказ.</p>
         <p style="margin-top: 8px;">
             <i class="fab fa-telegram"></i> Telegram · 
-            <i class="fab fa-whatsapp"></i> WhatsApp ·             
+            <i class="fab fa-whatsapp"></i> WhatsApp · 
+            <i class="far fa-envelope"></i> hello@aifreelance.ru
         </p>
-        <p style="margin-top: 12px; font-size: 0.8rem;">Инновационные решения для вашего бизнеса.</p>
+        <p style="margin-top: 12px; font-size: 0.8rem;">Основной цвет: зелёный. Инновационные решения для вашего бизнеса.</p>
     </div>
 </footer>
 
-<!-- Скрипт для плавной прокрутки и анимации появления карточек, а также обработки клика по email (гарантия плавности) -->
 <script>
     (function() {
-        // Плавная прокрутка для любых якорей, включая #feedback-form-section
+        // плавная прокрутка
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 const targetId = this.getAttribute('href');
@@ -709,7 +708,7 @@
             });
         });
 
-        // Эффект появления карточек (визуальное усиление)
+        // анимация карточек
         const cards = document.querySelectorAll('.service-card, .portfolio-item');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -726,10 +725,6 @@
             card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
             observer.observe(card);
         });
-        
-        // Для формы можно добавить легкое сообщение после отправки (опционально, formspree сам редиректит)
-        // Также проверим, что кнопка "Email" в шапке действительно ведет к форме.
-        // Уже добавлен href="#feedback-form-section"
     })();
 </script>
 </body>
